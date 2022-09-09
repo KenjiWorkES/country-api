@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ThemeButton = () => {
+const ThemeButton: React.FC = () => {
   return (
     <button className="themeButton">
       <img

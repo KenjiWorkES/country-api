@@ -1,12 +1,14 @@
 .header {
   width: 100%;
   padding: 2rem 1rem;
+  background-color: var(--color-primary);
   box-shadow: var(--shadow);
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 144rem;
   }
 
   &__logo {

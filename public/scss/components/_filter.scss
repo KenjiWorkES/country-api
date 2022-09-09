@@ -1,0 +1,12 @@
+.filter {
+  background-color: var(--color-primary);
+  width: 100%;
+  max-width: 20rem;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-input);
+  font-size: 1.4rem;
+  font-family: inherit;
+  font-weight: 600;
+}

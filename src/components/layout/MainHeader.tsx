@@ -1,7 +1,7 @@
 import React from 'react';
 import ThemeButton from './ThemeButton';
 
-export const MainHeader = () => {
+export const MainHeader: React.FC = () => {
   return (
     <header className="header">
       <div className="header__content">
