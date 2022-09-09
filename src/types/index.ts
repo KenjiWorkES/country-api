@@ -1,4 +1,10 @@
 export type ChildrenProp = { children: React.ReactNode };
+export type CountriesProps = {
+  countries: Country[];
+};
+export type CountryProps = {
+  country: Country;
+};
 
 export interface CountryElement {
   name: {

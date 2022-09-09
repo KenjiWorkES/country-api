@@ -3,12 +3,15 @@ import { getAllCountries } from './service/api';
 
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
+import { Country } from './types';
 
 function App() {
+  const [countries, setCountries] = useState<Country[]>([]);
+
   useEffect(() => {
     const fetch = async () => {
       const countries = await getAllCountries();
-      console.log(countries);
+      setCountries(countries);
     };
 
     fetch();
@@ -16,7 +19,7 @@ function App() {
 
   return (
     <Layout>
-      <Home />
+      <Home countries={countries} />
     </Layout>
   );
 }

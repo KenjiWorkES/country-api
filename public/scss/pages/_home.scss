@@ -8,4 +8,10 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
+    max-width: 144rem;
+  }
 }
