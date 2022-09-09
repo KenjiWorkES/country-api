@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  padding: 2rem 1rem;
+  box-shadow: var(--shadow);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-text);
+  }
+}
