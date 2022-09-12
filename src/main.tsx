@@ -4,11 +4,14 @@ import App from './App';
 import '/public/scss/main.scss';
 import ThemeContextProvider from './context/theme-context';
 import CountryContextProvider from './context/country-context';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <CountryContextProvider>
-    <ThemeContextProvider>
-      <App />
-    </ThemeContextProvider>
-  </CountryContextProvider>
+  <BrowserRouter>
+    <CountryContextProvider>
+      <ThemeContextProvider>
+        <App />
+      </ThemeContextProvider>
+    </CountryContextProvider>
+  </BrowserRouter>
 );

@@ -1,9 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { getAllCountries } from './service/api';
+import { CountryContextType } from './types';
+
+import { Routes, Route } from 'react-router-dom';
 
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
-import { Country, CountryContextType } from './types';
+
 import { CountryContext } from './context/country-context';
 
 function App() {
@@ -21,9 +24,16 @@ function App() {
 
   return (
     <Layout>
-      <Home
-        countries={filteredList.length === 0 ? countryList : filteredList}
-      />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              countries={filteredList.length === 0 ? countryList : filteredList}
+            />
+          }
+        />
+      </Routes>
     </Layout>
   );
 }
