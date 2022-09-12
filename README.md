@@ -30,7 +30,7 @@ Tabela de conteúdos
 
 Projeto desenvolvido para fins de treino baseado em um exercicio do [Frontend Mentor](https://www.frontendmentor.io/home).
 
-é possivel ver o projeto completo nesse link: https://lkspacetourism.netlify.app/
+é possivel ver o projeto completo nesse link: [https://whereintheworldlk.vercel.app/](https://whereintheworldlk.vercel.app/)
 
 ---
 
