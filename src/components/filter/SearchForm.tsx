@@ -20,7 +20,7 @@ const SearchForm: React.FC = () => {
         <img
           className="searchForm__icon"
           alt="search icon"
-          src={`/public/assets/icon-search-${
+          src={`/assets/icon-search-${
             theme === 'light' ? 'black' : 'white'
           }.png`}
         />
