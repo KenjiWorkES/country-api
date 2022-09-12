@@ -6,6 +6,7 @@ export const CountryContext = React.createContext<CountryContextType>({
   countryList: [],
   filteredList: [],
   getSingleCountry: () => {},
+  filterByRegion: () => {},
   setContryList: () => {},
   searchCountry: () => {},
 });
@@ -30,6 +31,13 @@ const CountryContextProvider: React.FC<ChildrenProp> = ({ children }) => {
     }
   };
 
+  const filterByRegion = (value: string) => {
+    const listFiltered = countryList.filter((country) =>
+      country.region.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredList(listFiltered);
+  };
+
   const getSingleCountry = (text: string | undefined) => {
     const singleCountry = countryList.filter(
       (country) => country.name.toLowerCase() === text?.toLowerCase()
@@ -44,6 +52,7 @@ const CountryContextProvider: React.FC<ChildrenProp> = ({ children }) => {
         countryList: countryList,
         filteredList: filteredList,
         getSingleCountry: getSingleCountry,
+        filterByRegion: filterByRegion,
         setContryList: setContryListHandler,
         searchCountry: searchCountry,
       }}

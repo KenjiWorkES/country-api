@@ -44,6 +44,7 @@ export interface Country {
 export interface CountryContextType {
   countryList: Country[] | [];
   filteredList: Country[] | [];
+  filterByRegion: ((value: string) => void) | (() => void);
   getSingleCountry: ((text: string | undefined) => Country) | (() => void);
   setContryList: ((list: Country[]) => void) | (() => void);
   searchCountry: ((list: string) => void) | (() => void);
@@ -52,4 +53,5 @@ export interface CountryContextType {
 export interface Theme {
   theme: string;
   switchTheme: () => void;
+  setThemeHandler: (text: string) => void;
 }
