@@ -5,6 +5,7 @@ import { Country, CountryContextType, ChildrenProp } from '../types';
 export const CountryContext = React.createContext<CountryContextType>({
   countryList: [],
   filteredList: [],
+  getSingleCountry: () => {},
   setContryList: () => {},
   searchCountry: () => {},
 });
@@ -29,11 +30,20 @@ const CountryContextProvider: React.FC<ChildrenProp> = ({ children }) => {
     }
   };
 
+  const getSingleCountry = (text: string | undefined) => {
+    const singleCountry = countryList.filter(
+      (country) => country.name.toLowerCase() === text?.toLowerCase()
+    );
+    const country = singleCountry[0];
+    return country;
+  };
+
   return (
     <CountryContext.Provider
       value={{
         countryList: countryList,
         filteredList: filteredList,
+        getSingleCountry: getSingleCountry,
         setContryList: setContryListHandler,
         searchCountry: searchCountry,
       }}

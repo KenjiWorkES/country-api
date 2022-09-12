@@ -1,0 +1,75 @@
+.single {
+  &__controls {
+    margin: 0 auto 5rem;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  &__container {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    color: var(--color-text);
+  }
+
+  &__flag {
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__column {
+    margin-bottom: 3rem;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    font-size: 1.4rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  &__text {
+  }
+
+  &__borders {
+    display: flex;
+    font-size: 1.4rem;
+    color: var(--color-text);
+  }
+
+  &__countries {
+    display: flex;
+  }
+
+  &__border {
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow-input);
+    padding: 0.2rem 2rem;
+    border-radius: 0.3rem;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

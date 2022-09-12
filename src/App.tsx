@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
+import Single from './pages/Single';
 
 import { CountryContext } from './context/country-context';
 
@@ -33,6 +34,7 @@ function App() {
             />
           }
         />
+        <Route path=":countryName" element={<Single />}></Route>
       </Routes>
     </Layout>
   );

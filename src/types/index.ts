@@ -3,8 +3,10 @@ export type CountriesProps = {
   countries: Country[];
 };
 export type CountryProps = {
-  country: Country;
+  country: Country | void;
 };
+export type CurrencieType = { name: string; symbol: string }[];
+export type LanguagesType = string[];
 
 export interface CountryElement {
   name: {
@@ -40,6 +42,7 @@ export interface Country {
 export interface CountryContextType {
   countryList: Country[] | [];
   filteredList: Country[] | [];
+  getSingleCountry: ((text: string | undefined) => Country) | (() => void);
   setContryList: ((list: Country[]) => void) | (() => void);
   searchCountry: ((list: string) => void) | (() => void);
 }
