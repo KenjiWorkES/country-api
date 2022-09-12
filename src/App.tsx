@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { getAllCountries } from './service/api';
 
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
-import { Country } from './types';
+import { Country, CountryContextType } from './types';
+import { CountryContext } from './context/country-context';
 
 function App() {
-  const [countries, setCountries] = useState<Country[]>([]);
+  const { countryList, filteredList, setContryList } =
+    useContext<CountryContextType>(CountryContext);
 
   useEffect(() => {
     const fetch = async () => {
       const countries = await getAllCountries();
-      setCountries(countries);
+      setContryList(countries);
     };
 
     fetch();
@@ -19,7 +21,9 @@ function App() {
 
   return (
     <Layout>
-      <Home countries={countries} />
+      <Home
+        countries={filteredList.length === 0 ? countryList : filteredList}
+      />
     </Layout>
   );
 }

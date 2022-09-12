@@ -50,6 +50,7 @@
   &__info {
     display: flex;
     font-size: 1.4rem;
+    color: var(--color-text);
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;

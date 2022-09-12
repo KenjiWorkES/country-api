@@ -36,3 +36,15 @@ export interface Country {
   languages: any;
   flag: string;
 }
+
+export interface CountryContextType {
+  countryList: Country[] | [];
+  filteredList: Country[] | [];
+  setContryList: ((list: Country[]) => void) | (() => void);
+  searchCountry: ((list: string) => void) | (() => void);
+}
+
+export interface Theme {
+  theme: string;
+  switchTheme: () => void;
+}
