@@ -51,7 +51,7 @@ export interface CountryContextType {
 }
 
 export interface Theme {
-  theme: string;
+  theme: string | null;
   switchTheme: () => void;
-  setThemeHandler: (text: string) => void;
+  setThemeHandler: (text: string | null) => void;
 }

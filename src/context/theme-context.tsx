@@ -8,18 +8,20 @@ export const ThemeContext = React.createContext<Theme>({
 });
 
 const ThemeProvider: React.FC<ChildrenProp> = ({ children }) => {
-  const [theme, setTheme] = useState<string>('light');
+  const [theme, setTheme] = useState<string | null>('light');
 
   const switchTheme = useCallback(() => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   }, [theme]);
 
-  const setThemeHandler = (text: string) => {
+  const setThemeHandler = (text: string | null) => {
     setTheme(text);
   };
 
   useEffect(() => {
-    localStorage.setItem('countryApi_theme', theme);
+    if (theme) {
+      localStorage.setItem('countryApi_theme', theme);
+    }
   }, [theme]);
 
   return (
