@@ -8,6 +8,7 @@ const Card: React.FC<CountryProps> = ({ country }) => {
   return (
     <figure className="card">
       <div className="card__image">
+        <div className="card__overlay"></div>
         <img className="card__flag" src={country.flag} />
       </div>
 
