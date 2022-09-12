@@ -75,7 +75,7 @@ const SingleInfo: React.FC<CountryProps> = ({ country }) => {
             <p className="single__text">{formatLanguagesText}</p>
           </div>
         </div>
-        <BordersInfo />
+        <BordersInfo borders={country!.borders} />
       </div>
     </>
   );

@@ -21,6 +21,7 @@ export const getAllCountries = async () => {
       currencie: country.currencies,
       languages: country.languages,
       flag: country.flags.svg,
+      borders: country.borders,
     };
 
     formatedCountries.push(formatedCountry);

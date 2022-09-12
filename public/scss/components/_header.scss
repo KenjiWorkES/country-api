@@ -16,5 +16,9 @@
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--color-text);
+
+    @include responsive(desktop) {
+      font-size: 2rem;
+    }
   }
 }

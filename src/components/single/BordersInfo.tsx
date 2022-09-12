@@ -1,13 +1,16 @@
 import React from 'react';
+import { BordersType } from '../../types';
 
-const BordersInfo: React.FC = () => {
+const BordersInfo: React.FC<BordersType> = ({ borders }) => {
   return (
     <div className="single__borders">
       <p className="single__label">Borders:</p>
       <div className="single__countries">
-        <p className="single__border">EUA</p>
-        <p className="single__border">EUA</p>
-        <p className="single__border">EUA</p>
+        {borders.map((border) => (
+          <p key={border} className="single__border">
+            {border}
+          </p>
+        ))}
       </div>
     </div>
   );

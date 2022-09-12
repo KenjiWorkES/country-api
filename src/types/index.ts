@@ -7,6 +7,7 @@ export type CountryProps = {
 };
 export type CurrencieType = { name: string; symbol: string }[];
 export type LanguagesType = string[];
+export type BordersType = { borders: string[] };
 
 export interface CountryElement {
   name: {
@@ -37,6 +38,7 @@ export interface Country {
   currencie: any;
   languages: any;
   flag: string;
+  borders: string[];
 }
 
 export interface CountryContextType {
