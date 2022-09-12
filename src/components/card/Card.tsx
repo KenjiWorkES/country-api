@@ -1,8 +1,9 @@
 import React from 'react';
 import { CountryProps } from '../../types';
+import { formatPopulation } from '../../utils';
 
 const Card: React.FC<CountryProps> = ({ country }) => {
-  console.log(country);
+  const population = formatPopulation(country.population);
 
   return (
     <figure className="card">
@@ -14,7 +15,7 @@ const Card: React.FC<CountryProps> = ({ country }) => {
         <h2 className="card__name">{country.name}</h2>
         <div className="card__info">
           <p className="card__label">Population:</p>
-          <p className="card__text">{country.population}</p>
+          <p className="card__text">{population}</p>
         </div>
         <div className="card__info">
           <p className="card__label">Region:</p>
