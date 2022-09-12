@@ -6,7 +6,10 @@ const Card: React.FC<CountryProps> = ({ country }) => {
 
   return (
     <figure className="card">
-      <img className="card__image" src={country.flag} />
+      <div className="card__image">
+        <img className="card__flag" src={country.flag} />
+      </div>
+
       <figcaption className="card__caption">
         <h2 className="card__name">{country.name}</h2>
         <div className="card__info">
