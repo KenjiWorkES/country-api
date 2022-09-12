@@ -55,20 +55,16 @@ Projeto desenvolvido para fins de treino baseado em um exercicio do [Frontend Me
 ### Desktop
 
 <p align="center">
-  <img alt="Desktop - Home" title="#Desktop-Home" src="https://user-images.githubusercontent.com/90098992/184672090-e27d38de-a31b-4aff-8a60-f4305b222224.jpg" width="40%">
-  <img width="40%" alt="Desktop - Destination - B" src="https://user-images.githubusercontent.com/90098992/184672400-bd80563a-4fd4-4586-9648-9e644df505ff.png">
-  <img width="40%" alt="Desktop - Technology - A" src="https://user-images.githubusercontent.com/90098992/184672410-9617dda1-7797-49ac-bd3f-ad3d8c8c158a.png">
-  <img width="40%" alt="Desktop - Crew - A" src="https://user-images.githubusercontent.com/90098992/184672422-15e39966-5998-49e6-b2db-c3b9bec2a607.png">
+  <img width="40%" alt="Desktop - Home" src="https://user-images.githubusercontent.com/90098992/189725246-88938aca-279e-44bc-af44-83381a7e1159.png">
+  <img width="40%" alt="Desktop - Single" src="https://user-images.githubusercontent.com/90098992/189726884-c9fba411-88b3-405f-a680-26914f7f6065.png">
 </p>
 
 ### Mobile
 
 <p align="center">
-  <img width="16%" alt="Mobile - Home" src="https://user-images.githubusercontent.com/90098992/184673141-db1aecc7-56dc-4763-b4d7-d18fe4e042a6.png">
-  <img width="16%" alt="Mobile - Menu" src="https://user-images.githubusercontent.com/90098992/184673245-9082a98c-351e-4745-afa3-94c4d6408426.png">
-  <img width="16%" alt="Mobile - Destination - A" src="https://user-images.githubusercontent.com/90098992/184673165-8097c32e-fb76-4ef9-8519-0f66492ec3d3.jpg">
-  <img width="16%" alt="Mobile - Crew - A" src="https://user-images.githubusercontent.com/90098992/184673198-ace6f446-4209-4a66-97f9-c50319c01c4a.jpg">
-  <img width="16%" alt="Mobile - Technology - A" src="https://user-images.githubusercontent.com/90098992/184673214-0bf09feb-6360-4cc0-b26c-adceee7c31db.jpg">
+
+  <img width="16%" alt="Mobile - Home" src="https://user-images.githubusercontent.com/90098992/189727378-8fb8ad8e-0ca6-4dae-aba6-a54bd00af574.png">
+  <img width="16%" alt="Mobile - Single" src="https://user-images.githubusercontent.com/90098992/189727129-0c22004a-811d-4552-b7ae-b75cc746448e.png">
 </p>
 
 ---
