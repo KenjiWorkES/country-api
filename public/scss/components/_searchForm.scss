@@ -9,6 +9,10 @@
   max-width: 40rem;
   background-color: var(--color-primary);
 
+  @include responsive(desktop) {
+    margin-bottom: 0;
+  }
+
   &__button {
     border: none;
     background-color: transparent;
