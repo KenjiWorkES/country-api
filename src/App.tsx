@@ -9,14 +9,19 @@ import Home from './pages/Home';
 import Single from './pages/Single';
 
 import { CountryContext } from './context/country-context';
+import Loading from './components/ui/Loading';
 
 function App() {
+  const [loading, setLoading] = useState<boolean>(false);
+
   const { countryList, filteredList, setContryList } =
     useContext<CountryContextType>(CountryContext);
 
   useEffect(() => {
     const fetch = async () => {
+      setLoading(true);
       const countries = await getAllCountries();
+      setLoading(false);
       setContryList(countries);
     };
 
@@ -29,9 +34,15 @@ function App() {
         <Route
           path="/"
           element={
-            <Home
-              countries={filteredList.length === 0 ? countryList : filteredList}
-            />
+            !loading ? (
+              <Home
+                countries={
+                  filteredList.length === 0 ? countryList : filteredList
+                }
+              />
+            ) : (
+              <Loading />
+            )
           }
         />
         <Route path=":countryName" element={<Single />}></Route>

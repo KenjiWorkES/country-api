@@ -5,8 +5,7 @@ import { CountryContextType } from '../../types';
 const Filter: React.FC = () => {
   const [selected, setSelected] = useState<string>('');
 
-  const { filterByRegion, filteredList } =
-    useContext<CountryContextType>(CountryContext);
+  const { filterByRegion } = useContext<CountryContextType>(CountryContext);
 
   const changeHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelected(event.target.value);
