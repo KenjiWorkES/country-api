@@ -1,6 +1,10 @@
 .single {
   &__controls {
     margin: 0 auto 5rem;
+
+    @include responsive(desktop) {
+      margin: 0 auto 8rem;
+    }
   }
 
   &__content {
@@ -8,11 +12,35 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    max-width: 144rem;
+    margin: 0 auto;
+
+    @include responsive(desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+    }
   }
 
   &__container {
     &:not(:last-child) {
       margin-bottom: 3rem;
+
+      @include responsive(desktop) {
+        width: 50%;
+      }
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+
+      @include responsive(desktop) {
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, max-content);
+      }
     }
 
     color: var(--color-text);
@@ -20,18 +48,36 @@
 
   &__flag {
     width: 100%;
+
+    @include responsive(desktop) {
+      width: 70%;
+    }
   }
 
   &__name {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+
+    @include responsive(desktop) {
+      grid-column: 1/ 3;
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__column {
     margin-bottom: 3rem;
 
+    @include responsive(desktop) {
+      margin-bottom: 4rem;
+    }
+
     &:not(:last-child) {
       margin-bottom: 4rem;
+
+      @include responsive(desktop) {
+        margin-bottom: 6rem;
+      }
     }
   }
 
@@ -39,8 +85,16 @@
     display: flex;
     font-size: 1.4rem;
 
+    @include responsive(desktop) {
+      font-size: 1.8rem;
+    }
+
     &:not(:last-child) {
       margin-bottom: 1rem;
+
+      @include responsive(desktop) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -56,6 +110,10 @@
     display: flex;
     font-size: 1.4rem;
     color: var(--color-text);
+
+    @include responsive(desktop) {
+      font-size: 1.8rem;
+    }
   }
 
   &__countries {
@@ -68,8 +126,16 @@
     padding: 0.2rem 2rem;
     border-radius: 0.3rem;
 
+    @include responsive(desktop) {
+      padding: 0.2rem 3rem;
+    }
+
     &:not(:last-child) {
       margin-right: 1rem;
+
+      @include responsive(desktop) {
+        margin-right: 1.5rem;
+      }
     }
   }
 }
